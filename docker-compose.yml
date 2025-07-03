@@ -24,6 +24,7 @@ services:
       DATABASE_URL: "postgres://fideruser:fiderpass@db:5432/fiderdb?sslmode=disable"
       EMAIL_SMTP_HOST: mailhost.ripollet.cat
       EMAIL_SMTP_PORT: 25
+      EMAIL_NOREPLY: noreply@ripollet.cat
 
 volumes:
   fider-db:
