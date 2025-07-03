@@ -18,8 +18,7 @@ services:
     depends_on:
       - db
     environment:
-      BASE_URL: http://localhost
-      APP_URL: http://millorem.ripollet.cat
+      BASE_URL: https://millorem.ripollet.cat
       JWT_SECRET: "jwt_s3cr3t$25"
       DATABASE_URL: "postgres://fideruser:fiderpass@db:5432/fiderdb?sslmode=disable"
       EMAIL_SMTP_HOST: mailhost.ripollet.cat
