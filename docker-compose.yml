@@ -17,8 +17,6 @@ services:
     restart: always
     depends_on:
       - db
-    ports:
-      - "3000:3000"
     environment:
       BASE_URL: http://localhost
       APP_URL: http://millorem.ripollet.cat
