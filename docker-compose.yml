@@ -27,6 +27,11 @@ services:
       EMAIL_NOREPLY: noreply@ripollet.cat
     networks:
       - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fider.rule=Host(`millorem.ripollet.cat`)"
+      - "traefik.http.routers.fider.entrypoints=websecure"
+      - "traefik.http.routers.fider.tls=true"
 
 volumes:
   fider-db:
