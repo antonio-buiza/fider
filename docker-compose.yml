@@ -27,7 +27,13 @@ services:
       EMAIL_SMTP_HOST: mailhost.ripollet.cat
       EMAIL_SMTP_PORT: 25
       EMAIL_NOREPLY: noreply@ripollet.cat
+    networks:
+      - web
 
 volumes:
   fider-db:
+
+networks:
+  web:
+    external: true
 
