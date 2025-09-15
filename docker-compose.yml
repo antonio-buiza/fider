@@ -19,6 +19,7 @@ services:
       - db
     environment:
       BASE_URL: https://millorem.ripollet.cat
+      TRUST_PROXY: "true"
       JWT_SECRET: "jwt_s3cr3t$25"
       DATABASE_URL: "postgres://fideruser:fiderpass@db:5432/fiderdb?sslmode=disable"
       EMAIL_SMTP_HOST: mailhost.ripollet.cat
@@ -31,6 +32,8 @@ services:
       - "traefik.http.routers.fider.rule=Host(`millorem.ripollet.cat`)"
       - "traefik.http.routers.fider.entrypoints=websecure"
       - "traefik.http.routers.fider.tls=true"
+      - "traefik.http.routers.fider.tls.certresolver=le"
+      - "traefik.http.services.fider.loadbalancer.server.port=3000"
 
 volumes:
   fider-db:
