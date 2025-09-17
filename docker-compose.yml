@@ -18,6 +18,8 @@ services:
     depends_on:
       - db
     environment:
+      HOST: 0.0.0.0
+      PORT: 3000
       BASE_URL: https://millorem.ripollet.cat
       TRUST_PROXY: "true"
       JWT_SECRET: "jwt_s3cr3t$25"
