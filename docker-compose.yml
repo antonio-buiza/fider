@@ -34,7 +34,7 @@ services:
       - "traefik.http.routers.fider.rule=Host(`millorem.ripollet.cat`)"
       - "traefik.http.routers.fider.entrypoints=websecure"
       - "traefik.http.routers.fider.tls=true"
-      - "traefik.http.routers.fider.tls.certresolver=le"
+      - "traefik.http.routers.fider.tls.certresolver=myresolver"
       - "traefik.http.services.fider.loadbalancer.server.port=3000"
 
 volumes:
